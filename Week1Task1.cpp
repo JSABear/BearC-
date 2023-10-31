@@ -30,6 +30,7 @@ int main()
             std::cout << "Vastasit oikein ja voitit!\n";
         }
     }
+    return 0;
 }
 
 int get_random_number(int min, int max)

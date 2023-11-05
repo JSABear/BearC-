@@ -4,8 +4,8 @@ int count_charLen(char* string, int len);
 
 int main() 
 {
-    char string[] = "Hello";  // Esimerkki merkkijono
-    char* string_ptr = string;  // Alusta osoitin mjonoon
+    char string[] = "esimerkki";  
+    char* string_ptr = string;  
 
     int length = 0;
 
@@ -20,8 +20,8 @@ int count_charLen(char* string, int len)
 {
     while (*string != '\0')
     {
-        len++;  // Lisää pituutta jokaisen merkin kohdalla
-        string++;  // Siirry seuraavaan merkkiin
+        len++;  
+        string++;  
     }
     return len;
 }

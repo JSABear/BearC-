@@ -1,0 +1,24 @@
+#include "Clock.h"
+#include <iostream>
+#include <thread>
+
+#ifdef _WIN32
+#define CLEAR_SCREEN "cls"
+#else
+#define CLEAR_SCREEN "clear"
+#endif
+
+int main() {
+    Clock clock(0, 0, 0);
+    clock.display();
+
+    while (true) {
+        std::system(CLEAR_SCREEN);
+        clock.tick();
+        clock.display();
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+    }
+
+    return 0;
+}
+

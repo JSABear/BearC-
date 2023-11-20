@@ -1,0 +1,24 @@
+#include "Clock.h"
+#include <iostream>
+#include <thread>
+#include <chrono>
+
+#ifdef _WIN32
+#define CLEAR_SCREEN "cls"
+#else
+#define CLEAR_SCREEN "clear"
+#endif
+
+int main() {
+    Clock* rolex = new Clock(00, 00, 00);
+
+    while (true) {
+        std::system(CLEAR_SCREEN);
+        rolex->tick();
+        rolex->display();
+        std::this_thread::sleep_for(std::chrono::seconds(1));
+    }
+
+    delete rolex;
+    return 0;
+}
